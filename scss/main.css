@@ -1,9 +1,3 @@
-/* colours */
-/* mixin for shadow */
-.trans, main, footer {
-  transition: all .6s ease-in; }
-
-/* reset */
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -17,7 +11,7 @@
 header {
   background: #A31414;
   width: 100%;
-  height: 10vh;
+  height: 10%;
   min-height: 100px;
   position: fixed;
   display: block;
@@ -33,32 +27,19 @@ header {
   justify-content: space-between; }
 
 #mainContainer {
-  background: #FFE5E3;
+  background: #F99D93;
   height: 100vh;
   width: 100vw;
-  position: absolute; }
-
-#hideBar {
-  width: 100%;
-  height: 10vh;
-  min-height: 100px; }
+  position: absolute;
+  top: 10%; }
 
 main {
-  width: 100%; }
+  width: 100%;
+  height: 60%; }
 
 footer {
-  -webkit-box-shadow: -2px -2px 5px gray;
-  -moz-box-shadow: -2px -2px 5px gray;
-  -ms-box-shadow: -2px -2px 5px gray;
-  box-shadow: -2px -2px 5px gray;
   background: #CC0000;
   width: 100%;
-  height: 100px;
-  max-height: 200px; }
-  footer:hover {
-    height: 250px; }
-
-#login {
-  height: 100px; }
+  height: 40%; }
 
 /*# sourceMappingURL=main.css.map */
