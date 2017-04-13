@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&amp;subset=latin-ext" rel="stylesheet">
     <title>Login Page</title>
   </head>
   <body>
@@ -10,11 +11,25 @@
       <img src="images/new_logo.svg">
     </header>
 <main>
-
-content
 <div id="loginButtonContainer">
-<div id="loginButt" class="butt">Login</div>
-<div id="signupButt" class="butt">Sign Up</div>
+<div id="loginButt" class="butt shadow">Login</div>
+<div id="signupButt" class="butt shadow">Sign Up</div>
+<div id="loginForm" class="form">
+  LOGIN FORM
+  <form action="login.php" name="login">
+  <label>  Username:
+    <input id="username" name="username" type="text" maxlength="10" placeholder="type username here"> </label>
+  <label> Password:<input id="password" name="password" type="password" placeholder="type password here"> </label>
+  </form>
+
+</div>
+<!-- <div id="signupForm" class="form">
+  <form action="signup.php" name="signup">
+    <label>  Username:
+      <input id="username" name="username" type="text" maxlength="10" placeholder="type username here"> </label>
+    <label> Password:<input id="password" name="password" type="password" placeholder="type password here"> </label>
+  </form>
+</div> -->
 </div>
 </main>
   </body>

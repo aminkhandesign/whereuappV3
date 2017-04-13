@@ -1,12 +1,18 @@
 /* colours */
 /* mixin for shadow */
-.trans {
-  transition: all .6s ease-in; }
+.flexHorizontal, #loginButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.trans, .butt {
+  transition: all .2s ease-in; }
 
 /* reset */
 * {
   box-sizing: border-box;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Baloo Chettan',serif; }
 
 .shadow {
   -webkit-box-shadow: 1px 2px 5px gray;
@@ -38,8 +44,38 @@ main {
 
 #loginButtonContainer {
   height: 200px;
-  border: 2px solid #A31414;
   width: 70%;
   margin: 50px auto; }
+
+.butt {
+  font-family: 'Baloo Cheetan',serif;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+  background: #F99D93;
+  color: #A31414;
+  text-align: center;
+  padding-top: 40px; }
+  .butt:hover {
+    background: #CC0000;
+    color: #FFE5E3; }
+
+.form {
+  position: fixed;
+  font-family: 'Baloo Cheetan',serif;
+  font-size: 2rem;
+  z-index: 200;
+  width: 95%;
+  padding: 10%;
+  color: #FFE5E3;
+  background: rgba(204, 0, 0, 0.9);
+  border-radius: 10px;
+  height: 90%;
+  top: 5%;
+  -webkit-box-shadow: 3px 3px 10px #A31414;
+  -moz-box-shadow: 3px 3px 10px #A31414;
+  -ms-box-shadow: 3px 3px 10px #A31414;
+  box-shadow: 3px 3px 10px #A31414; }
 
 /*# sourceMappingURL=main.css.map */
