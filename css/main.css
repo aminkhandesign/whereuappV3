@@ -1,18 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Chettan");
 /* colours */
+/* fonts */
 /* mixin for shadow */
+/*animations */
+@keyframes fadein {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px); }
+  1% {
+    display: block; }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 .flexHorizontal, #loginButtonContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
 
-.trans, .butt {
+.trans, .butt, input[type=submit]:hover {
   transition: all .2s ease-in; }
 
 /* reset */
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Baloo Chettan',serif; }
+  font-family: "Baloo Chettan", cursive; }
 
 .shadow {
   -webkit-box-shadow: 1px 2px 5px gray;
@@ -47,8 +60,24 @@ main {
   width: 70%;
   margin: 50px auto; }
 
+.signinTitles, .closeForm {
+  text-align: center;
+  color: white;
+  width: 100%;
+  position: relative;
+  top: -40px;
+  display: block; }
+
+.closeForm {
+  cursor: pointer;
+  border-radius: 5px;
+  background: #A31414;
+  border: 1px solid #F99D93;
+  width: 100%;
+  margin-top: 80px;
+  bottom: 20px; }
+
 .butt {
-  font-family: 'Baloo Cheetan',serif;
   cursor: pointer;
   width: 100px;
   height: 100px;
@@ -63,19 +92,58 @@ main {
 
 .form {
   position: fixed;
-  font-family: 'Baloo Cheetan',serif;
+  animation: fadein .5s ease-in;
   font-size: 2rem;
   z-index: 200;
-  width: 95%;
+  left: 5%;
+  width: 90%;
   padding: 10%;
   color: #FFE5E3;
   background: rgba(204, 0, 0, 0.9);
   border-radius: 10px;
-  height: 90%;
+  height: 80%;
   top: 5%;
   -webkit-box-shadow: 3px 3px 10px #A31414;
   -moz-box-shadow: 3px 3px 10px #A31414;
   -ms-box-shadow: 3px 3px 10px #A31414;
   box-shadow: 3px 3px 10px #A31414; }
+
+label {
+  display: inline-block; }
+
+input {
+  margin-bottom: 20px; }
+
+input[type=text], input[type=password], input[type=file] {
+  margin-left: 10px;
+  margin-right: 20px;
+  border: none;
+  border-bottom: 1px solid #A31414;
+  color: white;
+  font-size: 2rem;
+  background: rgba(204, 0, 0, 0); }
+  input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
+    outline: none;
+    border-bottom: 2px solid #FFE5E3; }
+  input[type=text]::placeholder, input[type=password]::placeholder, input[type=file]::placeholder {
+    font-style: italic;
+    color: #F99D93; }
+
+input[type=submit] {
+  width: 100px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5px;
+  background: #FFE5E3;
+  color: #CC0000;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 0px solid #FFE5E3; }
+  input[type=submit]:hover {
+    -webkit-box-shadow: 0px 0px 10px white;
+    -moz-box-shadow: 0px 0px 10px white;
+    -ms-box-shadow: 0px 0px 10px white;
+    box-shadow: 0px 0px 10px white;
+    background: white; }
 
 /*# sourceMappingURL=main.css.map */

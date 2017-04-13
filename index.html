@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&amp;subset=latin-ext" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&amp;subset=latin-ext" rel="stylesheet"> -->
     <title>Login Page</title>
   </head>
   <body>
@@ -15,11 +15,14 @@
 <div id="loginButt" class="butt shadow">Login</div>
 <div id="signupButt" class="butt shadow">Sign Up</div>
 <div id="loginForm" class="form">
-  LOGIN FORM
-  <form action="login.php" name="login">
+
+  <span class="signinTitles">LOGIN FORM</span>
+  <form action="login.php" method="post" name="login">
   <label>  Username:
-    <input id="username" name="username" type="text" maxlength="10" placeholder="type username here"> </label>
-  <label> Password:<input id="password" name="password" type="password" placeholder="type password here"> </label>
+    <input id="username" required name="username" type="text" maxlength="10" placeholder="type username here"> </label>
+  <label> Password:<input required id="password" name="password" type="password" placeholder="type password here"> </label><br>
+  <input type="submit" value="LOGIN">
+  <span class="closeForm">close form</span>
   </form>
 
 </div>
@@ -32,5 +35,6 @@
 </div> -->
 </div>
 </main>
+<script src="main.js"></scipt>
   </body>
 </html>
