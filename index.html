@@ -14,7 +14,7 @@
 <div id="loginButtonContainer">
 <div id="loginButt" class="butt shadow">Login</div>
 <div id="signupButt" class="butt shadow">Sign Up</div>
-<div id="loginForm" class="form">
+<div id="loginForm" class="noForm">
 
   <span class="signinTitles">LOGIN FORM</span>
   <form action="login.php" method="post" name="login">
@@ -22,19 +22,28 @@
     <input id="username" required name="username" type="text" maxlength="10" placeholder="type username here"> </label>
   <label> Password:<input required id="password" name="password" type="password" placeholder="type password here"> </label><br>
   <input type="submit" value="LOGIN">
-  <span class="closeForm">close form</span>
+  <span id="closeLogin" class="closeForm">close form</span>
   </form>
 
 </div>
-<!-- <div id="signupForm" class="form">
-  <form action="signup.php" name="signup">
-    <label>  Username:
-      <input id="username" name="username" type="text" maxlength="10" placeholder="type username here"> </label>
-    <label> Password:<input id="password" name="password" type="password" placeholder="type password here"> </label>
+<div id="signupForm" class="noForm" style="font-size:1.5rem">
+
+  <span class="signinTitles" style="font-size:2rem">SIGN UP</span>
+  <form action="signup.php" method="post" name="signup">
+  <label>  Username:
+    <input id="username" style="font-size:1.5rem" required name="username" type="text" maxlength="10" placeholder="choose name"> </label><br>
+  <label>  Email:
+    <input id="email" style="font-size:1.5rem" required name="email" type="email" placeholder="your email"> </label><br>
+  <label> Password:<input style="font-size:1.5rem" required id="password" name="password" type="password" placeholder="choose password"> </label><br>
+  <label> Re-enter Password:<input style="font-size:1.5rem" required id="reenter" name="reenter" type="password" placeholder="re-enter password"> </label><br>
+  <label> Choose Pic(optional):<input style="font-size:1.25rem" id="pic" name="pic" type="file" placeholder="choose a pic"> </label><br>
+  <input type="submit" value="SIGN UP">
+  <span id="closeSignup" class="closeForm">close form</span>
   </form>
-</div> -->
+
+</div>
 </div>
 </main>
-<script src="main.js"></scipt>
+<script src="scripts/main.js"></script>
   </body>
 </html>

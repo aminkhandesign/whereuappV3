@@ -58,7 +58,7 @@ main {
 #loginButtonContainer {
   height: 200px;
   width: 70%;
-  margin: 50px auto; }
+  margin: 250px auto; }
 
 .signinTitles, .closeForm {
   text-align: center;
@@ -101,12 +101,15 @@ main {
   color: #FFE5E3;
   background: rgba(204, 0, 0, 0.9);
   border-radius: 10px;
-  height: 80%;
+  height: auto;
   top: 5%;
   -webkit-box-shadow: 3px 3px 10px #A31414;
   -moz-box-shadow: 3px 3px 10px #A31414;
   -ms-box-shadow: 3px 3px 10px #A31414;
   box-shadow: 3px 3px 10px #A31414; }
+
+.noForm {
+  display: none; }
 
 label {
   display: inline-block; }
@@ -114,20 +117,22 @@ label {
 input {
   margin-bottom: 20px; }
 
-input[type=text], input[type=password], input[type=file] {
+input[type=text], input[type=password], input[type=file], input[type=email] {
   margin-left: 10px;
   margin-right: 20px;
   border: none;
   border-bottom: 1px solid #A31414;
   color: white;
   font-size: 2rem;
-  background: rgba(204, 0, 0, 0); }
-  input[type=text]:focus, input[type=password]:focus, input[type=file]:focus {
+  background: rgba(204, 0, 0, 0);
+  text-shadow: 1px 1px 15px white; }
+  input[type=text]:focus, input[type=password]:focus, input[type=file]:focus, input[type=email]:focus {
     outline: none;
     border-bottom: 2px solid #FFE5E3; }
-  input[type=text]::placeholder, input[type=password]::placeholder, input[type=file]::placeholder {
+  input[type=text]::placeholder, input[type=password]::placeholder, input[type=file]::placeholder, input[type=email]::placeholder {
     font-style: italic;
-    color: #F99D93; }
+    color: #F99D93;
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0); }
 
 input[type=submit] {
   width: 100px;
