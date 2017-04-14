@@ -47,9 +47,11 @@ main{position:absolute;top:150px;
 #loginButtonContainer{
 
             @extend .flexHorizontal;
+            position:relative;
+                      top:200px;
                       height:200px;
                       width:70%;
-                      margin:250px auto;}
+                      margin:0px auto;}
 
 .signinTitles{text-align:center;color:white;width:100%;
               position:relative;

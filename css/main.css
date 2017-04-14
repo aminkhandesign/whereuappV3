@@ -56,9 +56,11 @@ main {
   height: 100%; }
 
 #loginButtonContainer {
+  position: relative;
+  top: 200px;
   height: 200px;
   width: 70%;
-  margin: 250px auto; }
+  margin: 0px auto; }
 
 .signinTitles, .closeForm {
   text-align: center;
