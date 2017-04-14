@@ -9,13 +9,16 @@ var loginButt = document.getElementById('loginButt');
 var signupButt = document.getElementById('signupButt');
 var closeLogin = document.getElementById('closeLogin');
 var closeSignup = document.getElementById('closeSignup');
+// this value is a test url for network requests, reset it at will
+
+var url ="";
 
 //event handlers for revealing hiding forms
 
 //firstly function for clearing data from closed forms
 function clearForm(myForm){
-  for (i in myForm){
-    if(myForm[i].value!="LOGIN" && myForm[i].value!="SIGN UP")
+  for (i=0;i<myForm.length;i++){
+    if((myForm[i].value!="LOGIN") && (myForm[i].value!="SIGN UP"))
     {myForm[i].value=""}
   }
 }
@@ -62,7 +65,14 @@ function checkPassword(event){
   event.preventDefault();
   if(this.elements.namedItem("password2").value===this.elements.namedItem("reenter").value)
   {
-    alert(this.elements.namedItem("password2").value);
+
+    fetch(url).then(
+      function(result){console.log(result);return result}).then(
+        function(res){
+  console.log("this WORKED!!");message("FORM SUBMITED")}).catch(function(err){message("UhOh!:"+"\n"+err)});
+
+
+
   }
   else {message("PASSWORDS DONT MATCH")}
 
