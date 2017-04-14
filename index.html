@@ -29,14 +29,14 @@
 <!-- Sign Up form, hidden by default, revealed when button clicked  -->
 <div id="signupFormContainer" class="noForm" style="font-size:1.5rem">
   <span class="signinTitles" style="font-size:2rem">SIGN UP</span>
-  <form id="signupForm" action="signup.php" method="post" name="signup">
+  <form  enctype="multipart/form-data" id="signupForm" action="signup.php" method="post" name="signup">
   <label>  Username:
     <input id="username" style="font-size:1.5rem" required name="username" type="text" maxlength="10" placeholder="choose name">
    </label><br>
   <label>  Email:
     <input id="email" style="font-size:1.5rem" required name="email" type="email" placeholder="your email"> </label><br>
   <label> Password:
-    <input style="font-size:1.5rem" required id="password" name="password" type="password" placeholder="choose password">
+    <input style="font-size:1.5rem" required id="password2" name="password2" type="password" placeholder="choose password">
   </label><br>
   <label> Re-enter Password:
     <input style="font-size:1.5rem" required id="reenter" name="reenter" type="password" placeholder="re-enter password">

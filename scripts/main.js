@@ -45,4 +45,29 @@ signupButt.addEventListener("click",revealSignupForm);
 closeLogin.addEventListener("click",closeLoginForm);
 closeSignup.addEventListener("click",closeSignupForm);
 
+
+
+//function for checking password match
+function message(mymessage){
+  var newMessage = document.createElement("div");
+  var warning = document.createTextNode(mymessage);
+  newMessage.appendChild(warning);
+  newMessage.classList.add("message");
+  document.body.appendChild(newMessage);
+  newMessage.addEventListener("click",function(event){this.parentNode.removeChild(this)});
+
+}
+
+function checkPassword(event){
+  event.preventDefault();
+  if(this.elements.namedItem("password2").value===this.elements.namedItem("reenter").value)
+  {
+    alert(this.elements.namedItem("password2").value);
+  }
+  else {message("PASSWORDS DONT MATCH")}
+
+}
+
+ signupForm.addEventListener("submit",checkPassword);
+
 }
